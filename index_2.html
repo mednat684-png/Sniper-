@@ -1,0 +1,98 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sniper Host - Hébergement Web 100% Congo</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-[#0a0a0f] text-white">
+<nav class="flex justify-between items-center p-6 max-w-7xl mx-auto">
+  <h1 class="text-2xl font-bold text-purple-400">SNIPER HOST</h1>
+  <div class="flex gap-4">
+    <a href="#tarifs" class="text-gray-300">Tarifs</a>
+    <a href="admin.html" class="bg-gray-800 px-4 py-2 rounded-lg">Admin</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="text-center py-20 px-6">
+  <h1 class="text-5xl md:text-6xl font-bold">Hébergement Web<br><span class="text-purple-400">100% Congo</span></h1>
+  <p class="mt-6 text-xl text-gray-400 max-w-2xl mx-auto">Paiement MTN MoMo & Airtel Money. Support WhatsApp 24/7 à Pointe-Noire. Active en 5 minutes.</p>
+  <div class="mt-8 flex justify-center gap-4">
+    <a href="#tarifs" class="bg-purple-600 px-8 py-4 rounded-xl font-bold text-lg">Voir les offres</a>
+    <a href="https://wa.me/24205659905" class="bg-gray-800 px-8 py-4 rounded-xl font-bold">WhatsApp: 05 65 91 905</a>
+  </div>
+  <p class="mt-6 text-sm text-gray-500"><i class="fa-solid fa-check text-green-400"></i> MTN: 06 15 02 199 | Airtel: 05 65 91 905 | Paiement en FCFA</p>
+</section>
+
+<!-- FEATURES -->
+<section class="max-w-6xl mx-auto grid md:grid-cols-3 gap-6 px-6 py-10">
+  <div class="bg-gray-900 p-6 rounded-xl border border-gray-800"><i class="fa-solid fa-bolt text-purple-400 text-2xl"></i><h3 class="mt-3 font-bold">Ultra Rapide</h3><p class="text-gray-400 text-sm mt-2">Serveurs LiteSpeed, SSD NVMe, CDN Cloudflare gratuit.</p></div>
+  <div class="bg-gray-900 p-6 rounded-xl border border-gray-800"><i class="fa-solid fa-mobile-screen text-purple-400 text-2xl"></i><h3 class="mt-3 font-bold">Paiement Mobile Money</h3><p class="text-gray-400 text-sm mt-2">*105*1*1*242061502199*montant# - Pas besoin de carte bancaire.</p></div>
+  <div class="bg-gray-900 p-6 rounded-xl border border-gray-800"><i class="fa-brands fa-whatsapp text-green-400 text-2xl"></i><h3 class="mt-3 font-bold">Support WhatsApp 24/7</h3><p class="text-gray-400 text-sm mt-2">On répond en 15 min sur WhatsApp 06 15 02 199, même la nuit.</p></div>
+</section>
+
+<!-- PRICING -->
+<section id="tarifs" class="max-w-6xl mx-auto px-6 py-16">
+  <h2 class="text-3xl font-bold text-center">Tarifs en FCFA</h2>
+  <div class="grid md:grid-cols-3 gap-6 mt-10">
+    <div class="bg-gray-900 p-8 rounded-2xl border border-gray-800">
+      <h3 class="text-xl font-bold">STARTER</h3><p class="text-4xl font-bold mt-4">2 500 <span class="text-base font-normal text-gray-400">FCFA/mois</span></p>
+      <ul class="mt-6 space-y-2 text-sm text-gray-300"><li>✓ 1 Site Web</li><li>✓ 10 Go Stockage</li><li>✓ Domaine gratuit .com</li><li>✓ SSL gratuit</li></ul>
+      <button onclick="payer(2500,'STARTER')" class="mt-8 w-full bg-gray-800 hover:bg-gray-700 py-4 rounded-xl font-bold">Payer MTN MoMo</button>
+    </div>
+    <div class="bg-gradient-to-b from-purple-900/50 to-gray-900 p-8 rounded-2xl border-2 border-purple-500 relative">
+      <span class="absolute -top-4 left-1/2 -translate-x-1/2 bg-purple-600 px-4 py-1 rounded-full text-sm font-bold">POPULAIRE</span>
+      <h3 class="text-xl font-bold">PRO</h3><p class="text-4xl font-bold mt-4">7 500 <span class="text-base font-normal text-gray-400">FCFA/mois</span></p>
+      <ul class="mt-6 space-y-2 text-sm text-gray-300"><li>✓ 10 Sites Web</li><li>✓ 100 Go Stockage</li><li>✓ Domaines illimités</li><li>✓ Support prioritaire</li></ul>
+      <button onclick="payer(7500,'PRO')" class="mt-8 w-full bg-purple-600 hover:bg-purple-700 py-4 rounded-xl font-bold">Payer MTN MoMo</button>
+    </div>
+    <div class="bg-gray-900 p-8 rounded-2xl border border-gray-800">
+      <h3 class="text-xl font-bold">BUSINESS</h3><p class="text-4xl font-bold mt-4">15 000 <span class="text-base font-normal text-gray-400">FCFA/mois</span></p>
+      <ul class="mt-6 space-y-2 text-sm text-gray-300"><li>✓ Sites illimités</li><li>✓ Stockage illimité</li><li>✓ IP dédiée</li><li>✓ Support téléphone</li></ul>
+      <button onclick="payer(15000,'BUSINESS')" class="mt-8 w-full bg-gray-800 hover:bg-gray-700 py-4 rounded-xl font-bold">Payer MTN MoMo</button>
+    </div>
+  </div>
+  <div id="paymentBox" class="hidden mt-10 bg-green-900/20 border-2 border-green-500 p-8 rounded-2xl">
+    <h3 class="text-2xl font-bold text-green-400"><i class="fa-solid fa-money-bill-wave"></i> Paiement à effectuer</h3>
+    <div id="details" class="mt-6 space-y-3"></div>
+    <div class="mt-6 flex gap-4">
+      <a id="waLink" target="_blank" class="flex-1 bg-green-600 text-center py-4 rounded-xl font-bold"><i class="fa-brands fa-whatsapp"></i> Envoyer preuve sur WhatsApp</a>
+      <a href="dashboard.html" class="flex-1 bg-gray-800 text-center py-4 rounded-xl font-bold">Voir mon tableau de bord</a>
+    </div>
+  </div>
+</section>
+
+<footer class="border-t border-gray-800 py-10 text-center text-gray-500 text-sm">
+  <p>Sniper Host - Pointe-Noire, Congo Brazzaville | MTN MoMo: 06 15 02 199 | Airtel Money: 05 65 91 905 | WhatsApp: 05 65 91 905</p>
+  <p class="mt-2">© 2026 Sniper Host. Paiement 100% Mobile Money, pas de carte bancaire nécessaire.</p>
+</footer>
+
+<script>
+const MTN_RAW="242061502199", AIRTEL_RAW="242056591905", WA="24261502199";
+function payer(montant, plan){
+  const tx=`INV-${plan}-${Date.now()}`;
+  const box=document.getElementById('paymentBox');
+  const det=document.getElementById('details');
+  box.classList.remove('hidden');
+  det.innerHTML=`
+    <div class="bg-black p-4 rounded-xl">
+      <p><b>Plan:</b> ${plan} - ${montant} FCFA</p>
+      <p><b>Code transaction:</b> <span class="text-yellow-400 font-mono">${tx}</span></p>
+      <p class="mt-4 font-bold text-lg">1. MTN Mobile Money (recommandé):</p>
+      <p class="bg-gray-800 p-3 rounded-lg font-mono text-center text-xl mt-2">*105*1*1*${MTN_RAW}*${montant}#</p>
+      <p class="text-xs text-gray-400">Ou va dans MTN MoMo > Envoyer argent > 06 15 02 199 > ${montant} FCFA</p>
+      <p class="mt-4 font-bold">2. Airtel Money:</p>
+      <p class="bg-gray-800 p-3 rounded-lg font-mono text-center">*109*1*1*${AIRTEL_RAW}*${montant}#</p>
+      <p class="text-xs text-gray-400">Ou Airtel Money > Envoyer > 05 65 91 905</p>
+      <p class="mt-4 bg-yellow-900/30 p-3 rounded-lg text-yellow-300"><i class="fa-solid fa-triangle-exclamation"></i> Après paiement, envoie la capture d'écran sur WhatsApp avec le code ${tx}. Activation en 15 min.</p>
+    </div>`;
+  document.getElementById('waLink').href=`https://wa.me/${WA}?text=Preuve%20paiement%20${tx}%20-%20${plan}%20${montant}FCFA%20MTN%20${MTN_RAW}`;
+  box.scrollIntoView({behavior:'smooth'});
+  localStorage.setItem('last_payment', JSON.stringify({tx, plan, montant, date: new Date().toISOString()}));
+}
+</script>
+</body>
+</html>
